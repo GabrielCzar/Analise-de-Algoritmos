@@ -19,7 +19,7 @@ MAJORITARIO_FORCA_BRUTA(A,n): pior caso
 Pior caso:
 
 
-![](equacao1.gif)
+>> ![](equacao1.gif)
 
 No melhor caso os n/2+1 primeiros elementos são iguais, e o algoritmo encerra no passo 7 ainda na 1a iteração do primeiro 'for'. Portanto, no melhor caso o algoritmo é O(n).
 Usando ordenação
