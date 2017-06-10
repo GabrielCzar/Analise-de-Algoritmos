@@ -62,7 +62,7 @@ MAJORITARIO_DIVISAO_CONQUISTA(A,n):
       retorne valor
    retorne -1                                            1
 ```
-![](equacao4.svg)  
+![](equacao4.gif)  
 
 ### Recursão de cauda (iterativo)
 Suponha que a chamada recursiva nos n-1 primeiros elementos retorna o valor que sobrou, e sua quantidade, após cancelar todos os pares de elementos distintos. Como incluir o último elemento A[n - 1]? Seja (qte, valor) o par retornado pela chamada recursiva. Se 'valor' é igual ao último elemento, ou qte é igual a zero, retornamos (qte + 1, A[n-1]). Senão, retornamos (qte - 1, valor).
