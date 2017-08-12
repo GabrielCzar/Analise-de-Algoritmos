@@ -1,0 +1,43 @@
+# pseudocódigo - Distancia de edição
+
+#### Recursivo
+
+```py
+def distancia_edicao(A, B, m, n):
+  if m == 0:
+      return n
+  if n == 0:
+      return m
+
+  if A[m] == B[n]:
+      return distancia_edicao(A, B, m - 1, n - 1)  
+  else:
+      return min(1 + distancia_edicao(A, B, m - 1, n - 1),
+                  1 + distancia_edicao(A, B, m, n - 1),
+                  1 + distancia_edicao(A, B, m - 1, n))
+```
+
+#### Programacao Dinamica
+
+```c++
+int distancia_edicao(char A[], char B[], int m, int n) {
+
+    int distancias[m+1][n+1];
+    for (int i = 0; i <= n; i++) distancias[0][n] = i;
+    for (int i = 0; i <= m; i++) distancias[m][0] = i;
+
+    for (int i = 0; i <= m; i++) {
+        for (int j = 0; j <= n; j++) {
+            if (A[i] == B[j]) {
+                distancias[i][j] = distancias[i - 1][j - 1];
+            } else {
+                int troca = 1 + distancias[i - 1][j - 1];
+                int insere = 1 + distancias[i][j - 1];
+                int remove = 1 + distancias[i - 1][j];
+                distancias[i][j] = min(troca, min(insere, remove));
+            }
+        }
+    }
+    return distancias[m][n];
+}
+```

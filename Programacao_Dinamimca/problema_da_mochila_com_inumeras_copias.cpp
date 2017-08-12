@@ -2,12 +2,20 @@
 #define NULO -1
 
 using namespace std;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ok
 int n = 4;
 int W = 11;
 int P[4] = {6, 3, 4, 2}; //{5, 3, 6, 2};
 int V[4] = {30, 14, 16, 9}; //{24, 13, 30, 8};
 int M[11] = {0};
 
+<<<<<<< HEAD
+=======
+// 06_05
+>>>>>>> ok
 int mochila(int w){
     int maior = 0;
     for (int i = 0; i < n; ++i){
@@ -33,6 +41,52 @@ int mochila_mem(int w){
     return maior;
 }
 
+<<<<<<< HEAD
+=======
+
+int main(void){
+    cout << "Sem memorizacao: " << mochila(W - 1) << endl;
+
+    cout << "Com memorizacao: " << mochila_mem(W - 1) << endl;
+
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+// 06_06
+>>>>>>> ok
 void mochila_prog_dinamica() {
       M[0] = 0;
       for (int w = 0; w < W; w++) {
@@ -48,6 +102,7 @@ void mochila_prog_dinamica() {
       }
 }
 
+<<<<<<< HEAD
 int main(void){
     cout << "Sem memorizacao: " << mochila(W - 1) << endl;
 
@@ -58,3 +113,9 @@ int main(void){
 
     return 0;
 }
+=======
+mochila_prog_dinamica();
+    cout << "Programacao dinamica: " << M[W - 1] << endl;
+
+*/
+>>>>>>> ok

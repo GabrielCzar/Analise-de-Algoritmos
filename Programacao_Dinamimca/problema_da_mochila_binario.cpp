@@ -1,6 +1,17 @@
 #include <iostream>
 
 using namespace std;
+<<<<<<< HEAD
+=======
+
+int n = 4;
+int W = 11;
+int P[4] = {6, 3, 4, 2}; //{5, 3, 6, 2};
+double V[4] = {30, 14, 16, 9}; //{24, 13, 30, 8};
+int pred[11] = {0};
+
+
+>>>>>>> ok
 /*
 Retorna valor ótimo da mochila, e grava em pred o vetor de predecessores.
 - W: tamanho inicial da mochila.
@@ -50,6 +61,12 @@ double mochila_prog_din(int W, int n, int P[], double V[], int pred[]) {
 }
 
 int main(void) {
+<<<<<<< HEAD
     cout << "Hello World!" << endl;
+=======
+
+    cout << mochila_prog_din(W, n, P, V, pred) << endl;
+
+>>>>>>> ok
     return 0;
 }
